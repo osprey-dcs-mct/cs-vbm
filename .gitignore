@@ -4,4 +4,5 @@ db/
 dbd/
 envPaths
 lib/*
+*.swp
 
