@@ -12,7 +12,7 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 DB += $(OPTICS)/opticsApp/Db/2postMirror.db
 DB += $(AUTOSAVE)/asApp/Db/save_restoreStatus.db
-DB += $(DEVIOCSTATS)/devIocStats-3-1-13/db/iocAdminSoft.db
+DB += $(DEVIOCSTATS)/db/iocAdminSoft.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
