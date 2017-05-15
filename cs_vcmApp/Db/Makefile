@@ -10,7 +10,9 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
-#DB += xxx.db
+DB += $(OPTICS)/opticsApp/Db/2postMirror.db
+DB += $(AUTOSAVE)/asApp/Db/save_restoreStatus.db
+DB += $(DEVIOCSTATS)/devIocStats-3-1-13/db/iocAdminSoft.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
