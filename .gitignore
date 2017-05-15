@@ -1,0 +1,7 @@
+bin/*
+O.*
+db/
+dbd/
+envPaths
+lib/*
+
