@@ -1,6 +1,6 @@
 bin/*
 O.*
-db/
+/db/
 dbd/
 envPaths
 lib/*
