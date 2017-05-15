@@ -1,0 +1,14 @@
+# File: mirror_kinematics.db
+# Author: Wayne Lewis
+# Date: 2017-05-15
+#
+# Description:
+# Records to support the kinematics for three jack mirrors.
+
+record(transform, "$(P)$(R)Forward")
+{
+}
+
+record(transform, "$(P)$(R)Inverse")
+{
+}
