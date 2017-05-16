@@ -124,7 +124,7 @@ record(ao, "$(P)$(Q)length") {
 record(ao, "$(P)$(Q)width") {
   field(DESC, "dist between m2/m3 posts")
   field(PINI, "YES")
-  field(DOL, "$(LENGTH)")
+  field(DOL, "$(WIDTH)")
   field(OMSL, "closed_loop")
   field(PREC, "3")
   field(EGU, "m")
@@ -168,30 +168,32 @@ record(fanout, "$(P)$(Q)sync") {
 record(transform, "$(P)$(Q)t2") {
   field(DESC, "m1(a),m2(b),m3(c)->l(d),p(e),r(f)")
   field(CLCD, "(A+C)/2")
-  field(CLCE, "(A-(B+C)/2)/H")
-  field(CLCF, "(C-(A+B)/2)/I")
+  field(CLCE, "(A-(B+C)/2)/J*L")
+  field(CLCF, "(C-(A+B)/2)/K*L")
   field(INPA, "$(P)$(M1).RBV  NPP NMS")
   field(INPB, "$(P)$(M2).RBV  NPP NMS")
-  field(INPC, "$(P)$(M2).RBV  NPP NMS")
+  field(INPC, "$(P)$(M3).RBV  NPP NMS")
   field(INPJ, "$(P)$(Q)length.VAL  NPP NMS")
   field(INPK, "$(P)$(Q)width.VAL  NPP NMS")
+  field(INPL, "1000")
   field(PREC, "5")
 }
 
 # Inverse kinematics
 record(transform, "$(P)$(Q)t1") {
   field(DESC, "m1(a),m2(b),m3(c)<-l(d),p(e),r(f)")
-  field(CLCA, "D+(E*J-F*K)/3")
-  field(CLCB, "D+E*J-F*K")
-  field(CLCC, "D-(E*J-F*K)/3")
+  field(CLCA, "D+(E*J-F*K)/(3*L)")
+  field(CLCB, "D+E*J/L-F*K/L")
+  field(CLCC, "D-(E*J-F*K)/(3*L)")
   field(CLCD, "(A+C)/2")
-  field(CLCE, "(A-(B+C)/2)/J")
-  field(CLCF, "(C-(A+B)/2)/K")
+  field(CLCE, "(A-(B+C)/2)/J*L")
+  field(CLCF, "(C-(A+B)/2)/K*L")
   field(CLCG, "a")
   field(CLCH, "b")
   field(CLCI, "c")
   field(INPJ, "$(P)$(Q)length.VAL  NPP NMS")
   field(INPK, "$(P)$(Q)width.VAL  NPP NMS")
+  field(INPL, "1000")
   field(OUTA, "$(P)$(Q)m1BPut.VAL  PP MS")
   field(OUTB, "$(P)$(Q)m2BPut.VAL  PP MS")
   field(OUTC, "$(P)$(Q)m3BPut.VAL  PP MS")
@@ -243,6 +245,7 @@ record(swait, "$(P)$(Q)RWait") {
   field(FLNK, "$(P)$(Q)t2.PROC  PP MS")
   field(INAN, "$(P)$(M1).RBV")
   field(INBN, "$(P)$(M2).RBV")
+  field(INCN, "$(P)$(M3).RBV")
   field(DOPT, "Use DOL")
 }
 
