@@ -10,10 +10,9 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
-#DB += $(OPTICS)/opticsApp/Db/2postMirror.db
-DB_INSTALLS += mirror_kinematics.db
 DB += $(AUTOSAVE)/asApp/Db/save_restoreStatus.db
 DB += $(DEVIOCSTATS)/db/iocAdminSoft.db
+DB_INSTALLS += 3jack_mirror.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

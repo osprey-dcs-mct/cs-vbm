@@ -19,12 +19,14 @@ cs_vcm_DBD += base.dbd
 cs_vcm_DBD += opticsSupport.dbd
 cs_vcm_DBD += calcSupport.dbd
 cs_vcm_DBD += asSupport.dbd
+cs_vcm_DBD += calcSupport.dbd
 cs_vcm_DBD += devIocStats.dbd
 
 # Add all the support libraries needed by this IOC
 cs_vcm_LIBS += optics
 cs_vcm_LIBS += calc
 cs_vcm_LIBS += autosave
+cs_vcm_LIBS += calc
 cs_vcm_LIBS += devIocStats
 
 # cs_vcm_registerRecordDeviceDriver.cpp derives from cs_vcm.dbd
