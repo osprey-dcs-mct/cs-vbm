@@ -1,4 +1,4 @@
-/* cs_vcmMain.cpp */
+/* cs_vfmMain.cpp */
 /* Author:  Marty Kraimer Date:    17MAR2000 */
 
 #include <stddef.h>
