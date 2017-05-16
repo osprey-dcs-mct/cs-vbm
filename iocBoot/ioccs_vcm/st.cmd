@@ -12,7 +12,7 @@ dbLoadDatabase("dbd/cs_vcm.dbd",0,0)
 cs_vcm_registerRecordDeviceDriver(pdbbase) 
 
 ## Load record instances
-dbLoadRecords("db/3jack_mirror.db","P=D08-OP-,Q=VCM:,M1=STP-Y1,M2=STP-Y2,M3=STP-Y3")
+dbLoadRecords("db/3jack_mirror.db","P=D08-OP-,Q=VCM:,M1=VCM-STP-Y1,M2=VCM-STP-Y2,M3=VCM-STP-Y3,LENGTH=1650,WIDTH=250")
 
 iocInit()
 
