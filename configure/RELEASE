@@ -26,6 +26,7 @@
 MODULES = /epics/src/synApps_5_8/support
 OPTICS = $(MODULES)/optics-2-9-3
 AUTOSAVE = $(MODULES)/autosave-5-6-1
+CALC = $(MODULES)/calc-3-4-2-1
 DEVIOCSTATS = $(MODULES)/devIocStats-3-1-13
 
 # If using the sequencer, point SNCSEQ at its top directory:
