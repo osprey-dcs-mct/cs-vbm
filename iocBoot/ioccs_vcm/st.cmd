@@ -1,4 +1,4 @@
-#!../../bin/darwin-x86/cs_vcm
+#!../../bin/linux-x86_64/cs_vcm
 
 ## You may have to change cs_vcm to something else
 ## everywhere it appears in this file
