@@ -5,7 +5,7 @@
 
 < envPaths
 
-epicsEnvSet("IOC_PREFIX","D08-CS-IOC-MC01")
+epicsEnvSet("IOC_PREFIX","D08-CS-IOC-CS04")
 
 cd ${TOP}
 
