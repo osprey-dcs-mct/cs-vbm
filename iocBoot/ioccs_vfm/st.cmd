@@ -5,6 +5,11 @@
 
 < envPaths
 
+epicsEnvSet("ENGINEER", "Engineer")
+epicsEnvSet("LOCATION", "Location")
+
+epicsEnvSet("PREFIX", "D08-OP-DCM")
+epicsEnvSet("AS_PATH", "${TOP}/autosave")
 epicsEnvSet("IOC_PREFIX","D08-CS-IOC-CS04")
 
 cd ${TOP}
@@ -18,5 +23,17 @@ dbLoadRecords("db/3jack_mirror.db","P=D08-OP-,Q=VFM:,M1=VFM-STP-Y1,M2=VFM-STP-Y2
 dbLoadRecords("db/iocAdminSoft.db", "IOC=$(IOC_PREFIX)")
 dbLoadRecords("db/save_restoreStatus.db", "P=$(IOC_PREFIX):")
 
+# Load the autosave configuration
+cd iocBoot/${IOC}
+< autosave.cmd
+
 iocInit()
+
+cd ${AS_PATH}/req 
+makeAutosaveFiles()
+create_monitor_set("info_positions.req", 5, "")
+create_monitor_set("info_settings.req", 15, "")
+create_monitor_set("auto_settings.req", 15, "P=$(PREFIX)-")
+
+cd ${TOP}
 

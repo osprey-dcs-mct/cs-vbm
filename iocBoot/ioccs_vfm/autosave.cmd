@@ -16,7 +16,7 @@ save_restoreSet_NumSeqFiles(1)
 save_restoreSet_SeqPeriodInSeconds(300)
 
 # specify where save files should be
-set_savefile_path("${AUTOSAVE_DATA}", "save")
+set_savefile_path("${AS_PATH}", "sav")
 
 # specify what save files should be restored.  Note these files must be
 # in the directory specified in set_savefile_path(), or, if that function
@@ -24,7 +24,7 @@ set_savefile_path("${AUTOSAVE_DATA}", "save")
 # example: set_pass0_restoreFile("autosave_geiger.sav")
 
 # specify directories in which to to search for included request files
-set_requestfile_path("${AUTOSAVE_DATA}", "req")
+set_requestfile_path("${AS_PATH}", "req")
 set_requestfile_path("${CALC}/calcApp/Db", "")
 set_requestfile_path("${TOP}/iocBoot/${IOC}", "")
 
