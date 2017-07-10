@@ -8,7 +8,6 @@
 epicsEnvSet("ENGINEER", "Engineer")
 epicsEnvSet("LOCATION", "Location")
 
-epicsEnvSet("PREFIX", "D08-OP-DCM")
 epicsEnvSet("AS_PATH", "${TOP}/autosave")
 epicsEnvSet("IOC_PREFIX","D08-CS-IOC-CS04")
 
@@ -33,7 +32,6 @@ cd ${AS_PATH}/req
 makeAutosaveFiles()
 create_monitor_set("info_positions.req", 5, "")
 create_monitor_set("info_settings.req", 15, "")
-create_monitor_set("auto_settings.req", 15, "P=$(PREFIX)-")
 
 cd ${TOP}
 
