@@ -1,1 +1,1 @@
-cd iocBoot/ioccs_vfm/ && ./st.cmd
+cd iocBoot/ioc/ && ./st.cmd
