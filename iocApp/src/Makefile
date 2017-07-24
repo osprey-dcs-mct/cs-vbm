@@ -19,14 +19,12 @@ cs_vfm_DBD += base.dbd
 cs_vfm_DBD += opticsSupport.dbd
 cs_vfm_DBD += calcSupport.dbd
 cs_vfm_DBD += asSupport.dbd
-cs_vfm_DBD += calcSupport.dbd
 cs_vfm_DBD += devIocStats.dbd
 
 # Add all the support libraries needed by this IOC
 cs_vfm_LIBS += optics
 cs_vfm_LIBS += calc
 cs_vfm_LIBS += autosave
-cs_vfm_LIBS += calc
 cs_vfm_LIBS += devIocStats
 
 # cs_vfm_registerRecordDeviceDriver.cpp derives from cs_vfm.dbd
