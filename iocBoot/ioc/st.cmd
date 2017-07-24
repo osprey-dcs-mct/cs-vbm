@@ -10,6 +10,8 @@ epicsEnvSet("LOCATION", "Location")
 
 epicsEnvSet("AS_PATH", "${TOP}/autosave")
 epicsEnvSet("IOC_PREFIX","D08-CS-IOC-CS04")
+epicsEnvSet("EPICS_CA_ADDR_LIST", "10.3.1.255")
+epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
 
 cd ${TOP}
 
