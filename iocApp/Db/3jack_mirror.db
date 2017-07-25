@@ -168,23 +168,23 @@ record(fanout, "$(P)$(Q)sync") {
 record(transform, "$(P)$(Q)t2") {
   field(DESC, "m1(a),m2(b),m3(c)->l(d),p(e),r(f)")
   field(CLCD, "(A+C)/2")
-  field(CLCE, "(A-B)/J*L")
-  field(CLCF, "(B-C)/K*L")
+  field(CLCE, "(B-A)/J*L")
+  field(CLCF, "(C-B)/K*L")
   field(INPA, "$(P)$(M1).RBV  NPP NMS")
   field(INPB, "$(P)$(M2).RBV  NPP NMS")
   field(INPC, "$(P)$(M3).RBV  NPP NMS")
   field(INPJ, "$(P)$(Q)length.VAL  NPP NMS")
   field(INPK, "$(P)$(Q)width.VAL  NPP NMS")
   field(INPL, "1000")
-  field(PREC, "5")
+  field(PREC, "3")
 }
 
 # Inverse kinematics
 record(transform, "$(P)$(Q)t1") {
   field(DESC, "m1(a),m2(b),m3(c)<-l(d),p(e),r(f)")
-  field(CLCA, "D+(E*J+F*K)/(2*L)")
-  field(CLCB, "D+(-E*J+F*K)/(2*L)")
-  field(CLCC, "D-(E*J+F*K)/(2*L)")
+  field(CLCA, "D-(E*J+F*K)/(2*L)")
+  field(CLCB, "D-(-E*J+F*K)/(2*L)")
+  field(CLCC, "D+(E*J+F*K)/(2*L)")
   field(CLCD, "(A+C)/2")
   field(CLCE, "(A-B)/J*L")
   field(CLCF, "(B-C)/K*L")
