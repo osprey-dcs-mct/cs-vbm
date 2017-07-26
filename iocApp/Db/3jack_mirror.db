@@ -248,15 +248,3 @@ record(swait, "$(P)$(Q)RWait") {
   field(INCN, "$(P)$(M3).RBV")
   field(DOPT, "Use DOL")
 }
-
-record(swait, "$(P)$(Q)LWait") {
-  field(SCAN, "I/O Intr")
-  field(PINI, "YES")
-  field(FLNK, "$(P)$(Q)t3.PROC  PP MS")
-  field(INAN, "$(P)$(M1).LLM")
-  field(INBN, "$(P)$(M1).HLM")
-  field(INCN, "$(P)$(M2).LLM")
-  field(INDN, "$(P)$(M2).HLM")
-}
-
-
