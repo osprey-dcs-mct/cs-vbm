@@ -21,12 +21,17 @@
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
-include /home/control/epics/support/synApps_5_8/support/configure/RELEASE
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=/home/control/epics/base-3.14.12.6
+EPICS_BASE=/Users/waynelewis/epics/7.0.6.1/base-7.0.6.1
+MODULES=/Users/waynelewis/epics/7.0.6.1/modules
+CALC=$(MODULES)/calc-3-7-4
+AUTOSAVE=$(MODULES)/autosave-5-10-2
+BUSY=$(MODULES)/busy-1-7-3
+DEVIOCSTATS=$(MODULES)/iocStats-3-1-16
+OPTICS=$(MODULES)/optics-2-13-5
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
