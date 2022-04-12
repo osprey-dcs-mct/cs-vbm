@@ -30,6 +30,7 @@ MODULES=/Users/waynelewis/epics/7.0.6.1/modules
 CALC=$(MODULES)/calc-3-7-4
 AUTOSAVE=$(MODULES)/autosave-5-10-2
 BUSY=$(MODULES)/busy-1-7-3
+ASYN=$(MODULES)/asyn-4-42
 DEVIOCSTATS=$(MODULES)/iocStats-3-1-16
 OPTICS=$(MODULES)/optics-2-13-5
 
