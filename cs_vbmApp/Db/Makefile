@@ -12,7 +12,8 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 DB += $(AUTOSAVE)/asApp/Db/save_restoreStatus.db
 DB += $(DEVIOCSTATS)/db/iocAdminSoft.db
-DB_INSTALLS += 3jack_mirror.db
+#DB_INSTALLS += 3jack_mirror.db
+DB += 3jack_mirror.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
