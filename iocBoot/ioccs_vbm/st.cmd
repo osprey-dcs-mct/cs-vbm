@@ -1,6 +1,6 @@
-#!../../bin/linux-x86_64/cs_vfm
+#!../../bin/darwin-x86/cs_vbm
 
-## You may have to change cs_vfm to something else
+## You may have to change cs_vbm to something else
 ## everywhere it appears in this file
 
 < envPaths
@@ -16,8 +16,8 @@ epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
 cd ${TOP}
 
 ## Register all support components
-dbLoadDatabase("dbd/cs_vfm.dbd",0,0)
-cs_vfm_registerRecordDeviceDriver(pdbbase) 
+dbLoadDatabase("dbd/cs_vbm.dbd",0,0)
+cs_vbm_registerRecordDeviceDriver(pdbbase) 
 
 ## Load record instances
 dbLoadRecords("db/3jack_mirror.db","P=D08-OP-,Q=VFM:,M1=VFM-STP-Y1,M2=VFM-STP-Y2,M3=VFM-STP-Y3,LENGTH=1500,WIDTH=250")
