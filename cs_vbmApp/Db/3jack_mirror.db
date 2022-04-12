@@ -177,6 +177,8 @@ record(transform, "$(P)$(Q)t2") {
   field(INPK, "$(P)$(Q)width.VAL  NPP NMS")
   field(INPL, "1000")
   field(PREC, "3")
+  field(SDIS, "$(P)$(Q)t2_enable.VAL")
+  field(DISV, "0")
 }
 
 # Inverse kinematics
@@ -204,6 +206,8 @@ record(transform, "$(P)$(Q)t1") {
   field(OUTH, "$(P)$(M2).VAL  PP MS")
   field(OUTI, "$(P)$(M3).VAL  PP MS")
   field(PREC, "3")
+  field(SDIS, "$(P)$(Q)t1_enable.VAL")
+  field(DISV, "0")
 }
 
 record(transform, "$(P)$(Q)linr_tweak") {
@@ -247,4 +251,26 @@ record(swait, "$(P)$(Q)RWait") {
   field(INBN, "$(P)$(M2).RBV")
   field(INCN, "$(P)$(M3).RBV")
   field(DOPT, "Use DOL")
+}
+
+record(bo, "$(P)$(Q)t1_enable") {
+  field(OMSL, "closed_loop")
+  field(ZNAM, "Disable")
+  field(ONAM, "Enable")
+  field(UDF, "0")
+  field(STAT, "NO_ALARM")
+  field(SEVR, "NO_ALARM")
+
+  info(autosaveFields, "VAL")
+}
+
+record(bo, "$(P)$(Q)t2_enable") {
+  field(OMSL, "closed_loop")
+  field(ZNAM, "Disable")
+  field(ONAM, "Enable")
+  field(UDF, "0")
+  field(STAT, "NO_ALARM")
+  field(SEVR, "NO_ALARM")
+
+  info(autosaveFields, "VAL")
 }
