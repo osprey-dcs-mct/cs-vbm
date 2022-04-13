@@ -18,7 +18,7 @@ dbLoadDatabase("dbd/cs_vbm.dbd",0,0)
 cs_vbm_registerRecordDeviceDriver(pdbbase) 
 
 ## Load record instances
-dbLoadRecords("db/3jack_mirror.db","P=MCT:VBM:,Q=CS_Y:,M1=US_OB,M2=US_IB,M3=DS,LENGTH=1500,WIDTH=250")
+dbLoadRecords("db/3jack_mirror.db","P=MCT:VBM:,Q=CS_Y:,M1=US_OB,M2=US_IB,M3=DS,LENGTH=1070,WIDTH=210")
 dbLoadRecords("db/iocAdminSoft.db", "IOC=$(IOC_PREFIX)")
 dbLoadRecords("db/save_restoreStatus.db", "P=$(IOC_PREFIX):")
 
