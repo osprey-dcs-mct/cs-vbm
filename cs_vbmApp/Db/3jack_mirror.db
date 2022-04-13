@@ -160,8 +160,8 @@ record(calcout, "$(P)$(Q)cs_busy_reset_") {
 record(dfanout, "$(P)$(Q)cs_busy_reset_dfanout_") {
   field(DESC, "Fanout to reset busy records")
   field(OUTA, "$(P)$(Q)linr_busy PP")
-  field(OUTB, "$(P)$(Q)pitch_busy_ PP")
-  field(OUTC, "$(P)$(Q)roll_busy_ PP")
+  field(OUTB, "$(P)$(Q)pitch_busy PP")
+  field(OUTC, "$(P)$(Q)roll_busy PP")
   field(SELM, "All")
 } 
 
