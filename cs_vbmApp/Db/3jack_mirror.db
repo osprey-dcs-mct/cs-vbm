@@ -89,26 +89,6 @@ record(busy, "$(P)$(Q)linr_busy") {
   field(DESC, "Busy record for linear move")
 }
 
-record(calcout, "$(P)$(Q)cs_busy_reset_") {
-  field(DESC, "Movement completed calculation")
-  field(INPA, "$(P)$(M1).DMOV CPP")
-  field(INPB, "$(P)$(M2).DMOV CPP")
-  field(INPC, "$(P)$(M3).DMOV CPP")
-  field(CALC, "(A==1&&B==1&&C==1)?1:0")
-  field(OOPT, "Transition To Non-zero")
-  field(OCAL, "0")
-  field(DOPT, "Use OCAL")
-  field(OUT,  "$(P)$(Q)cs_busy_reset_dfanout_ PP")
-}
-
-record(dfanout, "$(P)$(Q)cs_busy_reset_dfanout_") {
-  field(DESC, "Fanout to reset busy records")
-  field(OUTA, "$(P)$(Q)linr_busy PP")
-  #field(OUTB, "$(P)$(Q)pitch_busy_")
-  #field(OUTC, "$(P)$(Q)roll_busy_")
-  field(SELM, "All")
-} 
-
 record(ao, "$(P)$(Q)pitch_tweakVal") {
   field(DOL, "1")
   field(PREC, "3")
@@ -124,6 +104,17 @@ record(ao, "$(P)$(Q)pitch") {
   field(OUT, "$(P)$(Q)t1.E  PP MS")
   field(PREC, "3")
   field(EGU, "mr")
+  field(FLNK, "$(P)$(Q)pitch_busy_set_ PP")
+}
+
+record(bo, "$(P)$(Q)pitch_busy_set_") {
+  field(DESC, "Pitch move busy setter")
+  field(OUT,  "$(P)$(Q)pitch_busy PP")
+  field(VAL,  "1")
+}
+
+record(busy, "$(P)$(Q)pitch_busy") {
+  field(DESC, "Busy record for pitch move")
 }
 
 record(ao, "$(P)$(Q)roll_tweakVal") {
@@ -141,7 +132,38 @@ record(ao, "$(P)$(Q)roll") {
   field(OUT, "$(P)$(Q)t1.F  PP MS")
   field(PREC, "3")
   field(EGU, "mr")
+  field(FLNK, "$(P)$(Q)roll_busy_set_ PP")
 }
+
+record(bo, "$(P)$(Q)roll_busy_set_") {
+  field(DESC, "Roll move busy setter")
+  field(OUT,  "$(P)$(Q)roll_busy PP")
+  field(VAL,  "1")
+}
+
+record(busy, "$(P)$(Q)roll_busy") {
+  field(DESC, "Busy record for roll move")
+}
+
+record(calcout, "$(P)$(Q)cs_busy_reset_") {
+  field(DESC, "Movement completed calculation")
+  field(INPA, "$(P)$(M1).DMOV CPP")
+  field(INPB, "$(P)$(M2).DMOV CPP")
+  field(INPC, "$(P)$(M3).DMOV CPP")
+  field(CALC, "A==1&&B==1&&C==1")
+  field(OOPT, "Transition To Non-zero")
+  field(OCAL, "0")
+  field(DOPT, "Use OCAL")
+  field(OUT,  "$(P)$(Q)cs_busy_reset_dfanout_ PP")
+}
+
+record(dfanout, "$(P)$(Q)cs_busy_reset_dfanout_") {
+  field(DESC, "Fanout to reset busy records")
+  field(OUTA, "$(P)$(Q)linr_busy PP")
+  field(OUTB, "$(P)$(Q)pitch_busy_ PP")
+  field(OUTC, "$(P)$(Q)roll_busy_ PP")
+  field(SELM, "All")
+} 
 
 record(ao, "$(P)$(Q)length") {
   field(DESC, "dist between m1/m2 posts")
