@@ -308,6 +308,7 @@ record(swait, "$(P)$(Q)RWait") {
 }
 
 record(bo, "$(P)$(Q)t1_enable") {
+  field(DESC, "t1 enable command")
   field(OMSL, "closed_loop")
   field(ZNAM, "Disable")
   field(ONAM, "Enable")
@@ -319,6 +320,7 @@ record(bo, "$(P)$(Q)t1_enable") {
 }
 
 record(bo, "$(P)$(Q)t2_enable") {
+  field(DESC, "t2 enable command")
   field(OMSL, "closed_loop")
   field(ZNAM, "Disable")
   field(ONAM, "Enable")
