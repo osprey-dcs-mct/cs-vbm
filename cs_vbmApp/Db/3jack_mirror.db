@@ -212,9 +212,10 @@ record(bo, "$(P)mirror-$(Q)") {
 
 record(fanout, "$(P)$(Q)sync") {
   field(PINI, "YES")
-  field(LNK1, "$(P)$(Q)vback1.PROC  PP MS")
-  field(LNK2, "$(P)$(Q)vback2.PROC  PP MS")
-  field(LNK3, "$(P)$(Q)vback3.PROC  PP MS")
+  field(LNK1, "$(P)$(Q)vback1.PROC PP MS")
+  field(LNK2, "$(P)$(Q)vback2.PROC PP MS")
+  field(LNK3, "$(P)$(Q)vback3.PROC PP MS")
+  field(LNK4, "$(P)$(Q)cs_busy_reset_dfanout_.PROC PP")
 }
 
 # Position reporting
