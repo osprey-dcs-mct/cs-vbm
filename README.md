@@ -40,5 +40,22 @@ client that writes to a coordinate system axis setpoint with a Channel Access pu
 caput -c -w 10 MCT:VBM:CS_Y:linr 4
 ```
 
+## Dependencies
+
+This IOC requires the following EPICS support modules:
+
+- calc
+- asyn
+- busy
+
+Optional support modules that are included (but not essential for basic
+operation of the coordinate system) are:
+
+- iocStats
+- autosave
+
+## TODO
+
+- Remove optics moduule
 
 
