@@ -32,7 +32,7 @@ AUTOSAVE=$(MODULES)/autosave-5-10-2
 BUSY=$(MODULES)/busy-1-7-3
 ASYN=$(MODULES)/asyn-4-42
 DEVIOCSTATS=$(MODULES)/iocStats-3-1-16
-OPTICS=$(MODULES)/optics-2-13-5
+MOTOR=$(MODULES)/motor-7-2-2-cc6c6a9b
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
