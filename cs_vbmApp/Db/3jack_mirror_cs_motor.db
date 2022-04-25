@@ -23,3 +23,55 @@ record(calc, "$(P)$(Q)linr_motor_scale_") {
   field(INPB, "$(CS_MRES=0.00001)")
   field(CALC, "A/B")
 }
+
+record(motor, "$(P)$(Q)pitch_motor") {
+  field(DESC, "Pitch motor")
+  field(DTYP, "Soft Channel")
+  field(RINP, "$(P)$(Q)pitch_motor_scale_")
+  field(OUT,  "$(P)$(Q)pitch PP")
+  field(DINP, "$(P)$(Q)pitch_done_calc_")
+  field(PREC, 5)
+  field(MRES, "$(MRES=0.00001)")
+}
+
+record(calc, "$(P)$(Q)pitch_done_calc_") {
+  field(DESC, "Calculate motor done status")
+  field(INPA, "$(P)$(M1).DMOV CPP")
+  field(INPB, "$(P)$(M2).DMOV CPP")
+  field(INPC, "$(P)$(M3).DMOV CPP")
+  field(CALC, "A==1&&B==1&&C==1")
+}
+
+record(calc, "$(P)$(Q)pitch_motor_scale_") {
+  field(DESC, "Motor scaling calculation -> RVAL")
+  field(PINI, "YES")
+  field(INPA, "$(P)$(Q)t2.E CPP")
+  field(INPB, "$(CS_MRES=0.00001)")
+  field(CALC, "A/B")
+}
+
+record(motor, "$(P)$(Q)roll_motor") {
+  field(DESC, "Pitch motor")
+  field(DTYP, "Soft Channel")
+  field(RINP, "$(P)$(Q)roll_motor_scale_")
+  field(OUT,  "$(P)$(Q)roll PP")
+  field(DINP, "$(P)$(Q)roll_done_calc_")
+  field(PREC, 5)
+  field(MRES, "$(MRES=0.00001)")
+}
+
+record(calc, "$(P)$(Q)roll_done_calc_") {
+  field(DESC, "Calculate motor done status")
+  field(INPA, "$(P)$(M1).DMOV CPP")
+  field(INPB, "$(P)$(M2).DMOV CPP")
+  field(INPC, "$(P)$(M3).DMOV CPP")
+  field(CALC, "A==1&&B==1&&C==1")
+}
+
+record(calc, "$(P)$(Q)roll_motor_scale_") {
+  field(DESC, "Motor scaling calculation -> RVAL")
+  field(PINI, "YES")
+  field(INPA, "$(P)$(Q)t2.F CPP")
+  field(INPB, "$(CS_MRES=0.00001)")
+  field(CALC, "A/B")
+}
