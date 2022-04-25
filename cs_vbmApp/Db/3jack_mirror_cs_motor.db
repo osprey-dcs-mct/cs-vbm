@@ -51,7 +51,7 @@ record(calc, "$(P)$(Q)pitch_motor_scale_") {
 }
 
 record(motor, "$(P)$(Q)roll_motor") {
-  field(DESC, "Pitch motor")
+  field(DESC, "Roll motor")
   field(DTYP, "Soft Channel")
   field(RINP, "$(P)$(Q)roll_motor_scale_")
   field(OUT,  "$(P)$(Q)roll PP")
