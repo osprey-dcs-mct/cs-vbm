@@ -14,6 +14,7 @@ DB += $(AUTOSAVE)/asApp/Db/save_restoreStatus.db
 DB += $(DEVIOCSTATS)/db/iocAdminSoft.db
 #DB_INSTALLS += 3jack_mirror.db
 DB += 3jack_mirror.db
+DB += 3jack_mirror_cs_motor.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
