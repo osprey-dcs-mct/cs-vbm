@@ -6,6 +6,9 @@ record(motor, "$(P)$(Q)linr_motor") {
   field(DINP, "$(P)$(Q)linr_done_calc_")
   field(PREC, 5)
   field(MRES, "$(MRES=0.00001)")
+  field(RTRY, "0")
+
+  info(autosaveFields, "TWV")
 }
 
 record(calc, "$(P)$(Q)linr_done_calc_") {
@@ -30,8 +33,11 @@ record(motor, "$(P)$(Q)pitch_motor") {
   field(RINP, "$(P)$(Q)pitch_motor_scale_")
   field(OUT,  "$(P)$(Q)pitch PP")
   field(DINP, "$(P)$(Q)pitch_done_calc_")
-  field(PREC, 5)
+  field(PREC, "5")
   field(MRES, "$(MRES=0.00001)")
+  field(RTRY, "0")
+
+  info(autosaveFields, "TWV")
 }
 
 record(calc, "$(P)$(Q)pitch_done_calc_") {
@@ -56,8 +62,11 @@ record(motor, "$(P)$(Q)roll_motor") {
   field(RINP, "$(P)$(Q)roll_motor_scale_")
   field(OUT,  "$(P)$(Q)roll PP")
   field(DINP, "$(P)$(Q)roll_done_calc_")
-  field(PREC, 5)
+  field(PREC, "5")
   field(MRES, "$(MRES=0.00001)")
+  field(RTRY, "0")
+
+  info(autosaveFields, "TWV")
 }
 
 record(calc, "$(P)$(Q)roll_done_calc_") {
