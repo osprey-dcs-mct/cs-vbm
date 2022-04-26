@@ -103,3 +103,23 @@ record(seq, "$(P)$(Q)sync_stop")
   field(DOL1, "1")
   field(LNK1, "$(P)$(Q)sync.PROC")
 }
+
+record(calc, "$(P)$(Q)speed_alarm")
+{
+  field(INPA, "$(P)$(M1).VELO CP")
+  field(INPB, "$(P)$(M2).VELO CP")
+  field(INPC, "$(P)$(M3).VELO CP")
+  field(INPD, "$(P)$(Q)speed MS")
+  field(PINI, "YES")
+  field(CALC, "ABS(A-B)+ABS(A-C)<0.0001?0:1")
+  field(HIHI, "0.1")
+  field(HHSV, "MAJOR")
+}
+
+record(dfanout, "$(P)$(Q)speed"){
+  field(OMSL, "supervisory")
+  field(EGU, "mm/sec")
+  field(OUTA, "$(P)$(M1).VELO")
+  field(OUTB, "$(P)$(M2).VELO")
+  field(OUTC, "$(P)$(M3).VELO")
+}
