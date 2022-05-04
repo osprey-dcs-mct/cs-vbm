@@ -7,6 +7,7 @@ record(motor, "$(P)$(Q)linr_motor") {
   field(PREC, 5)
   field(MRES, "$(MRES=0.00001)")
   field(RTRY, "0")
+  field(STOO, "$(P)$(Q)stop.PROC")
 
   info(autosaveFields, "TWV")
 }
@@ -36,6 +37,7 @@ record(motor, "$(P)$(Q)pitch_motor") {
   field(PREC, "5")
   field(MRES, "$(MRES=0.00001)")
   field(RTRY, "0")
+  field(STOO, "$(P)$(Q)stop.PROC")
 
   info(autosaveFields, "TWV")
 }
@@ -65,6 +67,7 @@ record(motor, "$(P)$(Q)roll_motor") {
   field(PREC, "5")
   field(MRES, "$(MRES=0.00001)")
   field(RTRY, "0")
+  field(STOO, "$(P)$(Q)stop.PROC")
 
   info(autosaveFields, "TWV")
 }
@@ -83,4 +86,20 @@ record(calc, "$(P)$(Q)roll_motor_scale_") {
   field(INPA, "$(P)$(Q)t2.F CPP")
   field(INPB, "$(CS_MRES=0.00001)")
   field(CALC, "A/B")
+}
+
+record(dfanout, "$(P)$(Q)stop"){
+  field(OMSL, "supervisory")
+  field(VAL, "1")
+  field(OUTA, "$(P)$(M1).STOP PP")
+  field(OUTB, "$(P)$(M2).STOP PP")
+  field(OUTC, "$(P)$(M3).STOP PP")
+  field(FLNK, "$(P)$(Q)sync_stop.PROC")
+}
+
+record(seq, "$(P)$(Q)sync_stop")
+{
+  field(DLY1, "0.5")
+  field(DOL1, "1")
+  field(LNK1, "$(P)$(Q)sync.PROC")
 }

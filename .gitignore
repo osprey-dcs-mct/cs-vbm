@@ -8,4 +8,4 @@ lib/*
 autosave/sav/
 autosave/req/info*.req
 info*.req
-
+*.local
