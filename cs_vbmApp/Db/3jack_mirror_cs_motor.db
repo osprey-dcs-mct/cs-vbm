@@ -114,7 +114,7 @@ record(ao, "$(P)$(Q)speed_threshold")
 
 record(calcout, "_$(P)$(Q)speed_alarm")
 {
-  field(DESC, "Compare all motor speds")
+  field(DESC, "Compare all motor speeds")
   field(INPA, "$(P)$(M1).VELO CP")
   field(INPB, "$(P)$(M2).VELO CP")
   field(INPC, "$(P)$(M3).VELO CP")
