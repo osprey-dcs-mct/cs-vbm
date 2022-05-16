@@ -128,8 +128,8 @@ record(calcout, "_$(P)$(Q)speed_alarm")
 record(bi, "$(P)$(Q)speed_alarm")
 {
   field(DESC, "Alarm if speeds are different")
-  field(ZNAM, "OK")
-  field(ONAM, "ALARM")
+  field(ZNAM, "SAME")
+  field(ONAM, "DIFFERENT")
   field(OSV, "MAJOR")
 }
 
